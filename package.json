@@ -1,0 +1,19 @@
+{
+  "name": "coding-to-interview",
+  "version": "1.0.0",
+  "description": "- [ ] Build fluency in at least 1 language _(the one you will interview in)_\r - [ ] Have worked on a large-ish project to completion you can talk about\r - [ ] Be able to answer behavioral questions about past experiences",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jest": "^26.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Michael Smith",
+  "license": "ISC",
+  "transform": {}
+}
