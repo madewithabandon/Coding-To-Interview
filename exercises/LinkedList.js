@@ -14,8 +14,21 @@ class LinkedList {
     }
 
     // Add a new node to the end of the linked list.
-    add() {
-
+    add(value) {
+        var new_node = new Node(value);
+        if (this.head == null){
+            // make new_node the head, exit
+            this.head = new_node;
+        }
+        else {
+            // add node to end, change pointer of previous
+            var current = this.head;
+            while(current.next != null){
+                current = current.next;
+            }
+            current.next = new_node;
+        }
+        this.size++;
     }
 
     // If the value is in the list, remove the node. If the value is not in the list, throw an error.
