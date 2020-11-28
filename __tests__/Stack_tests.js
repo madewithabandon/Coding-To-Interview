@@ -36,7 +36,7 @@ describe("Stack", () => {
             stack.push(FIRST_VALUE);
             expect(stack.stack[0]).toEqual(FIRST_VALUE);
             var value = stack.pop();
-            expect(stack.stack[0]).toBeNull();
+            expect(stack.stack[0]).toBeUndefined();
             expect(value).toEqual(FIRST_VALUE);
         });
 
@@ -46,7 +46,7 @@ describe("Stack", () => {
             var value = stack.pop();
             expect(value).toEqual(SECOND_VALUE);
             expect(stack.stack[0]).toEqual(FIRST_VALUE);
-            expect(stack.stack[1]).toBeNull();
+            expect(stack.stack[1]).toBeUndefined();
         });
 
         it("Should decrease in size", () => {
