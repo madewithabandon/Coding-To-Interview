@@ -126,6 +126,11 @@ describe('LinkedList tests', () => {
             expect(list.head.next.value).toEqual(SECOND_VALUE);
             expect(list.head.next.next.value).toEqual(FIRST_VALUE);
         });
+
+        it('Extra Credit: Should reverse the list with a tail', () => {
+            list.reverse();
+            expect(list.tail.value).toEqual(FIRST_VALUE);
+        })
     });
 
 });

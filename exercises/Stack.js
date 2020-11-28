@@ -22,3 +22,10 @@ class Stack {
 }
 
 module.exports = Stack;
+
+/* EXTRA CREDIT 
+
+  - What is the Big-O of the `push` function?
+  - What is the Big-O of the `pop` function?
+
+*/
