@@ -29,10 +29,21 @@
   - [ ] Dynamic Programming
   - [ ] Powers of 2
 
-  #### Usage
+#### Usage
+  
+##### Setup
+1. Fork the project
 
-  [nodejs 14 & npm](https://nodejs.org/en/download/)
+1. Download the prerequisites 
 
-  Setup: `npm install`
+    1. [VSCode](https://code.visualstudio.com/)
+    1. [nodejs 14 & npm](https://nodejs.org/en/download/)
 
-  Run Tests: `npm test`
+1. `npm install` from the base folder
+
+##### Practice
+1. Complete Exercises from the Exercises folder
+1. Run Tests: `npm test`
+
+  The folder "Exercises" has everything you need to practice. Complete Exercises and use `npm test` to see if your program passes.
+  You can check your answers in the `answers` git branch, but there are many ways to solve these problems!

@@ -67,7 +67,7 @@ class LinkedList {
         return this;
     }
 
-    // 
+    // Reverse the linked list.
     reverse() {
     
     }
@@ -78,10 +78,10 @@ module.exports = LinkedList;
 
 /* EXTRA CREDIT 
 
-  - What is the O of the `add` function?
-  - What is the O of the `remove` function?
+  - What is the Big-O of the `add` function?
+  - What is the Big-O of the `remove` function?
   - Make `add` and `remove` "chainable"
   - Make it a "Doubly-Linked List" by adding a `previous` to nodes
-  - How could you change the data structure to make adding an element O(1)
+  - How could you change the data structure to make adding an element Big-O(1)
 
 */

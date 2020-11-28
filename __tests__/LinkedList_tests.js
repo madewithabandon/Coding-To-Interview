@@ -1,10 +1,4 @@
 const LinkedList = require("../exercises/LinkedList");
-class Node {
-    constructor(value) {
-        this.next = null;
-        this.value = value;
-    }
-}
 
 describe('LinkedList tests', () => {
     const FIRST_VALUE = 6;
@@ -67,19 +61,15 @@ describe('LinkedList tests', () => {
         it('Extra Credit: Should have `previous` nodes', () => {
             list.add(FIRST_VALUE);
             list.add(SECOND_VALUE);
-            expect(list.next.previous.value).toEqual(FIRST_VALUE);
+            expect(list.head.next.previous.value).toEqual(FIRST_VALUE);
         });
     });
 
     describe('remove', () => {
         beforeEach(() => {
-            list = new LinkedList();
             list.add(FIRST_VALUE);
             list.add(SECOND_VALUE);
             list.add(THIRD_VALUE);
-        });
-        afterEach(() => {
-            list = null;
         });
 
         it('Should remove the last element of the list', () => {
@@ -125,14 +115,9 @@ describe('LinkedList tests', () => {
 
     describe('reverse', () => {
         beforeEach(() => {
-            list = new LinkedList();
             list.add(FIRST_VALUE);
             list.add(SECOND_VALUE);
             list.add(THIRD_VALUE);
-        });
-
-        afterEach(() => {
-            list = null;
         });
 
         it('Should reverse the list', () => {
@@ -141,6 +126,11 @@ describe('LinkedList tests', () => {
             expect(list.head.next.value).toEqual(SECOND_VALUE);
             expect(list.head.next.next.value).toEqual(FIRST_VALUE);
         });
+
+        it('Extra Credit: Should reverse the list with a tail', () => {
+            list.reverse();
+            expect(list.tail.value).toEqual(FIRST_VALUE);
+        })
     });
 
 });
