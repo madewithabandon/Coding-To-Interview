@@ -14,12 +14,12 @@ class LinkedList {
     }
 
     // Add a new node to the end of the linked list.
-    add() {
+    add(value) {
 
     }
 
     // If the value is in the list, remove the node. If the value is not in the list, throw an error.
-    remove() {
+    remove(value) {
 
     }
 
@@ -28,7 +28,7 @@ class LinkedList {
 
     }
 
-    // 
+    // Reverse the linked list.
     reverse() {
     
     }

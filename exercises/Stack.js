@@ -5,7 +5,7 @@ class Stack {
     }
 
     // Add an item to the top of the stack
-    push() {
+    push(value) {
 
     }
 
