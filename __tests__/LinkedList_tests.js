@@ -61,7 +61,7 @@ describe('LinkedList tests', () => {
         it('Extra Credit: Should have `previous` nodes', () => {
             list.add(FIRST_VALUE);
             list.add(SECOND_VALUE);
-            expect(list.next.previous.value).toEqual(FIRST_VALUE);
+            expect(list.head.next.previous.value).toEqual(FIRST_VALUE);
         });
     });
 
