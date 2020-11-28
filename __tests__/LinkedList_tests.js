@@ -48,7 +48,7 @@ describe('LinkedList tests', () => {
             expect(list.head).not.toBeNull();
             expect(list.head.value).toEqual(FIRST_VALUE);
             expect(list.head.next.value).toEqual(SECOND_VALUE);
-            expect(list.head.next.next.value).toEqual(SECOND_VALUE);
+            expect(list.head.next.next.value).toEqual(THIRD_VALUE);
             expect(list.size).toEqual(3);
         });
         
