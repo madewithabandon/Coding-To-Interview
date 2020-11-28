@@ -26,8 +26,7 @@ describe('LinkedList tests', () => {
     describe('add', () => {
         
         it('Should add an element to the list', () => {
-            var node = new Node(FIRST_VALUE);
-            list.add(node);
+            list.add(FIRST_VALUE);
             expect(list.head).not.toBeNull();
             expect(list.head.value).toEqual(FIRST_VALUE);
             expect(list.size).toEqual(1);
@@ -35,17 +34,15 @@ describe('LinkedList tests', () => {
     
         it('Should add a second element to the list', () => {
             var node = new Node(SECOND_VALUE);
-            list.add(node);
+            list.add(SECOND_VALUE);
             expect(list.head).not.toBeNull();
-            expect(list.head.value).toEqual(FIRST_VALUE);
             expect(list.head.next.value).toEqual(SECOND_VALUE);
             expect(list.size).toEqual(2);
 
         });
 
         it('Should add a third element to the list', () => {
-            var node = new Node(THIRD_VALUE);
-            list.add(node);
+            list.add(THIRD_VALUE);
             expect(list.head).not.toBeNull();
             expect(list.head.value).toEqual(FIRST_VALUE);
             expect(list.head.next.value).toEqual(SECOND_VALUE);
@@ -54,7 +51,7 @@ describe('LinkedList tests', () => {
         });
         
         it('Extra Credit: Should call add as a chainable function', () => {
-            list.add(new Node(FIRST_VALUE)).add(new Node(SECOND_VALUE)).add(new Node(THIRD_VALUE))
+            list.add(FIRST_VALUE).add(SECOND_VALUE).add(THIRD_VALUE)
             expect(list.size).toEqual(6);
         });
 
@@ -70,12 +67,9 @@ describe('LinkedList tests', () => {
     describe('remove', () => {
         beforeEach(() => {
             list = new LinkedList();
-            var node1 = new Node(FIRST_VALUE);
-            var node2 = new Node(SECOND_VALUE);
-            var node3 = new Node(THIRD_VALUE);
-            list.add(node1);
-            list.add(node2);
-            list.add(node3);
+            list.add(FIRST_VALUE);
+            list.add(SECOND_VALUE);
+            list.add(THIRD_VALUE);
         });
         afterEach(() => {
             list = null;
@@ -125,12 +119,9 @@ describe('LinkedList tests', () => {
     describe('reverse', () => {
         beforeEach(() => {
             list = new LinkedList();
-            var node1 = new Node(FIRST_VALUE);
-            var node2 = new Node(SECOND_VALUE);
-            var node3 = new Node(THIRD_VALUE);
-            list.add(node1);
-            list.add(node2);
-            list.add(node3);
+            list.add(FIRST_VALUE);
+            list.add(SECOND_VALUE);
+            list.add(THIRD_VALUE);
         });
 
         afterEach(() => {
