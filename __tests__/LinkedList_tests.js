@@ -1,10 +1,4 @@
 const LinkedList = require("../exercises/LinkedList");
-class Node {
-    constructor(value) {
-        this.next = null;
-        this.value = value;
-    }
-}
 
 describe('LinkedList tests', () => {
     const FIRST_VALUE = 6;
@@ -73,13 +67,9 @@ describe('LinkedList tests', () => {
 
     describe('remove', () => {
         beforeEach(() => {
-            list = new LinkedList();
             list.add(FIRST_VALUE);
             list.add(SECOND_VALUE);
             list.add(THIRD_VALUE);
-        });
-        afterEach(() => {
-            list = null;
         });
 
         it('Should remove the last element of the list', () => {
@@ -125,14 +115,9 @@ describe('LinkedList tests', () => {
 
     describe('reverse', () => {
         beforeEach(() => {
-            list = new LinkedList();
             list.add(FIRST_VALUE);
             list.add(SECOND_VALUE);
             list.add(THIRD_VALUE);
-        });
-
-        afterEach(() => {
-            list = null;
         });
 
         it('Should reverse the list', () => {
