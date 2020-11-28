@@ -84,7 +84,7 @@ describe('LinkedList tests', () => {
 
         it('Should remove the last element of the list', () => {
             list.remove(THIRD_VALUE);
-            expect(list.head.next.next.value).toBeNull();
+            expect(list.head.next.next).toBeNull();
             expect(list.size).toEqual(2);
         });
 
