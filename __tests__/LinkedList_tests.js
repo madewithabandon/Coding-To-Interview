@@ -33,7 +33,7 @@ describe('LinkedList tests', () => {
         });
     
         it('Should add a second element to the list', () => {
-            var node = new Node(SECOND_VALUE);
+            list.add(FIRST_VALUE);
             list.add(SECOND_VALUE);
             expect(list.head).not.toBeNull();
             expect(list.head.next.value).toEqual(SECOND_VALUE);
@@ -42,6 +42,8 @@ describe('LinkedList tests', () => {
         });
 
         it('Should add a third element to the list', () => {
+            list.add(FIRST_VALUE);
+            list.add(SECOND_VALUE);
             list.add(THIRD_VALUE);
             expect(list.head).not.toBeNull();
             expect(list.head.value).toEqual(FIRST_VALUE);
@@ -52,14 +54,19 @@ describe('LinkedList tests', () => {
         
         it('Extra Credit: Should call add as a chainable function', () => {
             list.add(FIRST_VALUE).add(SECOND_VALUE).add(THIRD_VALUE)
-            expect(list.size).toEqual(6);
+            expect(list.size).toEqual(3);
         });
 
         it('Extra Credit: Should have a tail', () => {
+            list.add(FIRST_VALUE);
+            list.add(SECOND_VALUE);
+            list.add(THIRD_VALUE);
             expect(list.tail.value).toEqual(THIRD_VALUE);
         });
 
         it('Extra Credit: Should have `previous` nodes', () => {
+            list.add(FIRST_VALUE);
+            list.add(SECOND_VALUE);
             expect(list.next.previous.value).toEqual(FIRST_VALUE);
         });
     });
