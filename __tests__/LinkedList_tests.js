@@ -90,7 +90,7 @@ describe('LinkedList tests', () => {
 
         it('Should remove the middle element of the list', () => {
             list.remove(SECOND_VALUE);
-            expect(list.head.next.value).toEqual(SECOND_VALUE);
+            expect(list.head.next.value).toEqual(THIRD_VALUE);
             expect(list.size).toEqual(2);
         });
 
