@@ -3,6 +3,7 @@ class Node {
     constructor(value) {
         this.next = null;
         this.value = value;
+        this.previous = null;
     }
 }
 
@@ -11,6 +12,7 @@ class LinkedList {
     constructor() {
         this.head = null
         this.size = 0;
+        this.tail = null
     }
 
     // Add a new node to the end of the linked list.
@@ -27,7 +29,10 @@ class LinkedList {
                 current = current.next;
             }
             current.next = new_node;
+            new_node.previous = current;
+
         }
+        this.tail = new_node;
         this.size++;
         return this;
     }
@@ -35,18 +40,28 @@ class LinkedList {
     // If the value is in the list, remove the node. If the value is not in the list, throw an error.
     remove(value) {
         var current = this.head;
+        var previous = this.head;
         if (current.value == value){
             this.head = current.next;
+            current.previous = null;
             this.size--;
+            if (current.next == null){
+                this.tail = null;
+            }
             return this;
         }
 
         while(current.next != null){
             if (current.next.value == value){
                 current.next =current.next.next;
+                current.next.previous = previous;
                 this.size--;
+                if (current.next == null){
+                    this.tail = current;
+                }
                 return this;
             }
+            previous = current;
             current = current.next;
         }
         throw new Error("value not found")
@@ -69,7 +84,18 @@ class LinkedList {
 
     // Reverse the linked list.
     reverse() {
-    
+        var current = this.head;
+        this.tail = this.head;
+        var temp;
+        var previous = null;
+        while (current.next != null){
+            temp = current.next;
+            current.next = previous;
+            previous = current;
+            current = temp;
+        }
+        current.next = previous;
+        this.head = current;
     }
 }
 
