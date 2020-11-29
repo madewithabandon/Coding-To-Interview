@@ -53,8 +53,10 @@ class LinkedList {
 
         while(current.next != null){
             if (current.next.value == value){
-                current.next =current.next.next;
-                current.next.previous = previous;
+                current.next = current.next.next;
+                if (current.next != null){
+                    current.next.previous = previous;
+                }
                 this.size--;
                 if (current.next == null){
                     this.tail = current;
