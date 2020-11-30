@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var Queue = require('../exercises/Queue.js');
 
 describe("Queue", () => {
@@ -95,9 +94,8 @@ describe("Queue", () => {
             expect(queue.size).toEqual(0);
         });
     });
-=======
-// `require` pulls in the module from the file with your Queue
-var Queue = require('../exercises/Queue');
+/* // `require` pulls in the module from the file with your Queue
+//var Queue = require('../exercises/Queue');
 
 // `describe` sets up the description of your test. `describe` can be 
 describe("Queue", () => {
@@ -111,6 +109,5 @@ describe("Queue", () => {
             // `expect` is provided by the test framework `Jest`. Check out the api for more info https://jestjs.io/docs/en/api
             expect(true).toBeTruthy();
         })
-    })
->>>>>>> 28b64dc2a98e5573489a0d119cf2afc6f6ac4d15
+    }) */
 });
