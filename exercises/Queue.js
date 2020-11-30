@@ -32,5 +32,8 @@ module.exports = Queue;
 
   - What is the Big-O of the `enqueue` function?
   - What is the Big-O of the `dequeue` function?
+  - Write your own tests! Open `./__tests__/Queue_tests.js` to write your own tests
+    Use `./__tests__/Stack_tests.js` as a guide and see if you can cover edge cases
+    and test your queue code.
 
 */
