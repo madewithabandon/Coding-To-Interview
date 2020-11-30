@@ -8,7 +8,7 @@ describe("Stack", () => {
     beforeEach(() => {
         stack = new Stack();
     });
-
+ 
     afterEach(() => { stack = null; });
 
     describe("push", () => {

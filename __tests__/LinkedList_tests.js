@@ -111,6 +111,11 @@ describe('LinkedList tests', () => {
             expect(list.head.next).toBeNull();
             expect(list.head.value).toEqual(THIRD_VALUE);
         })
+
+        it('Should remove with previous', () => {
+            list.remove(SECOND_VALUE);
+            expect(list.head.next.previous.value).toEqual(FIRST_VALUE);
+        })
     });
 
     describe('reverse', () => {

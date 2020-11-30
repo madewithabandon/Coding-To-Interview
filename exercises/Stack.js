@@ -6,17 +6,21 @@ class Stack {
 
     // Add an item to the top of the stack
     push(value) {
-
+      this.size = this.stack.push(value);
     }
 
     // Remove an item from the top of the stack and return it. Return `null` if the stack is empty.
     pop() {
-
+      if (this.size > 0){
+        this.size--;
+        return this.stack.pop();
+      }
+      return null;
     }
 
     // Return the item on top of the stack
     peek() {
-
+      return this.stack[this.size-1];
     }
 
 }
